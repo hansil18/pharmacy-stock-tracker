@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>display</title>
+<style>
+.deep{display:flex;
+      flex-wrap:wrap;
+     }
+.deep > div{
+ background-color:#F6CEF5;
+ font-size:20px;
+ margin:20px;
+ padding:20px;
+ width:200px;}
+h1{
+  color:red;
+  background-color:#BEF781;
+  text-align:center;}
+h3{
+  color:teal;}
+body{
+     background:url("{{url_for('static', filename='/images/i.jpg')}}");
+     background-size:50%;}
+</style>
+
+<body>
+ <h1>medicine available in these shops!</h1>
+ <div class="deep">
+ <div>
+     {% for login in log %}
+     {% for i in b %}
+     {% if login.id == i %}
+        <p>
+            {{login.username}},{{login.address}}
+        </p>
+     {%endif%}
+     {% endfor %}
+     {% endfor %}
+ </div>
+ </div>
+</body>
+</html>

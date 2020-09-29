@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            register page
+        </title>
+    </head>
+<style>
+    h1
+    {
+        text-align:center;
+        color:royalblue;
+    }
+    input[name=username]
+    {
+        background-color:#E0FFFF;
+                         size:20px;
+    }
+
+    input[name=password]
+    {
+        background-color:#7FFFD4;
+    }
+
+    input[name=shop]
+    {
+        background-color:#90EE90;
+    }
+
+    input[name=address]
+    {
+        background-color:#FFFACD;
+    }
+    p
+    {
+    text-align:center;
+    }
+
+    body
+    {
+    background:url("{{url_for('static', filename='/images/l.jpg')}}");
+    background-size:cover;
+    }
+    button
+    {
+        hight:20px;
+    }
+    box
+    {
+        width:320px;
+        hight:420px;
+        background:url("{{url_for('static', filename='/images/i.jpg')}}");
+        background-size:320px 420px;
+        color:#fff;
+        top:50%;
+        left:50%;
+        position:absolute;
+        transform: translate(-50%,-50%);
+        box-sizing:border-box;
+        padding:70px;
+    }
+    a{
+         margin:100px;
+        hight:210px;
+        top:58%;
+        left:43%;
+        position:absolute;
+        transform: translate(-50%,-50%);
+    }
+    button:hover
+    {
+        background-color:teal;
+    }
+</style>
+<body>
+    <form action="{{url_for ('exp')}}" method="post">
+        <box>
+            <h1>register here!</h1>
+            <p> <input name="username" type="text&number" placeholder="username"></p>
+            <p>  <input name="password" type="password" placeholder="password"></p>
+            <p><input name="shop" type="text" placeholder="shop name"></p>
+            <p> <input name="address" type="text&number" placeholder="address"></p>
+            <p><button>submit</button></p>
+        </box>
+        <a href="loginpage.html">goto login  page!!</a>
+        <a href="search.html">to search for a medicine</a>
+    </form>
+</body>
+</html>
